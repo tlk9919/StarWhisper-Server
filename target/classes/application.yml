@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: StarWhisper_Server
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/starwhisper
+    username: root
+    password: root
+  mail:
+    host: smtp.126.com
+    username: tlk_sure@126.com
+    password: TJhzZdbL4BkNXJtN
+    properties:
+      mail:
+#        启用 SMTP 身份验证。
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+server:
+  port: 3000
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+jwt:
+  secret: your_jwt_secret
+  expiration: 3600000
+
+openai:
+  api-key: sk-51819998bf314b68a3efd5e7b4adb23c
+  base-url: https://api.deepseek.com
